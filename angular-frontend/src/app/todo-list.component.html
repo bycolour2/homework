@@ -1,7 +1,7 @@
 <div class="todo-content">
   <h1 class="page-title">My Todos</h1>
   <div class="todo-create">
-    <form #todoForm="ngForm" (ngSubmit)="createTodo(todoForm)" novalidate>
+    <form #todoForm="ngForm" (ngSubmit)="createTodo(todoForm)" (keydown.enter)="$event.preventDefault()" novalidate>
       <input
         type="text"
         id="title"
