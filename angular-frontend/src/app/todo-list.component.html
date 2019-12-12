@@ -6,15 +6,22 @@
         type="text"
         id="title"
         class="form-control"
-        placeholder="Type a todo and press enter..."
+        placeholder="Type a todo"
         required
         name="title"
         [(ngModel)]="newTodo.title"
         #title="ngModel"
+        (keyup)="checkTodo()"
       />
+      <button type="submit" [disabled]="existingTodo || !newTodo.title" class="md-button">Submit</button>
       <div *ngIf="title.errors && title.dirty" class="alert alert-danger">
         <div [hidden]="!title.errors">
           Title is required.
+        </div>
+      </div>
+      <div *ngIf="existingTodo" class="alert alert-danger">
+        <div [hidden]="!existingTodo">
+          Todo with the same title already exists.
         </div>
       </div>
     </form>

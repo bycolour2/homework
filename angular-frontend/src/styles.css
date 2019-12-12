@@ -23,7 +23,39 @@ i {
 }
 
 input {
+
   border: 1px solid #E8E8E8;
+}
+
+form input {
+  max-width: 80%;
+  margin-right: 20px;
+}
+
+.md-button {
+  padding: 0 6px 0 6px;
+  margin: 6px 8px 6px 8px;
+  min-width: 88px;
+  min-height: 50px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration:none;
+  border: none;
+  outline: none;
+  color: #626262;
+  background: none;
+}
+
+.md-button:hover {
+  background: rgb(240, 240, 240);
+}
+
+.md-button:active {
+  background: rgb(221, 221, 221);
+}
+
+.md-button:disabled {
+  color: #dddddd;
 }
 
 .page-title {
@@ -62,10 +94,10 @@ input {
 }
 
 .todo-content .alert-danger {
-  padding-left: 15px;
+  max-width: 80%;
+  padding: 5px 15px 0;
   font-size: 14px;
   color: red;
-  padding-top: 5px;
 }
 
 .todo-content ul {
